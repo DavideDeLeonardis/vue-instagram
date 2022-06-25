@@ -17,7 +17,7 @@
 </template>
 
 <script>
-import Storie from "./Storie.vue";
+import Storie from "./Storie";
 
 export default {
    name: "Stories",

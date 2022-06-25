@@ -1,0 +1,31 @@
+@import "../mixins";
+
+.posts {
+   margin-top: 30px;
+
+   .post {
+      width: 100%;
+      margin-bottom: 50px;
+      border: 1px solid #eaeaea;
+
+      .post-header {
+         @include flex($justify: space-between);
+         padding: 10px 20px;
+
+         & > div {
+            @include flex($gap: 10px);
+
+            img {
+               width: 35px;
+               padding: 2px;
+               border: 2px solid #c700c7;
+               border-radius: 50%;
+            }
+         }
+      }
+
+      img {
+         width: 100%;
+      }
+   }
+}
