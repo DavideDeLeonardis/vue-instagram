@@ -2,8 +2,8 @@
    <div id="app">
       <Nav />
       <div class="container main-container">
-         <Main :profiles="profiles" :posts="posts" />
-         <Aside :profiles="profiles" />
+         <Main :data="data" />
+         <Aside :profiles="data.profiles" />
       </div>
    </div>
 </template>
@@ -25,8 +25,10 @@ export default {
    data() {
       return {
          api_start: "https://flynn.boolean.careers/exercises/api/boolgram",
-         profiles: [],
-         posts: [],
+         data: {
+            profiles: [],
+            posts: [],
+         },
       };
    },
    methods: {
@@ -35,10 +37,10 @@ export default {
             .then((result) => {
                switch (array) {
                   case "profiles":
-                     this.profiles = result.data;
+                     this.data.profiles = result.data;
                      break;
                   case "posts":
-                     this.posts = result.data;
+                     this.data.posts = result.data;
                      break;
                }
             })

@@ -1,7 +1,7 @@
 <template>
    <main>
-      <Stories :profiles="profiles" />
-      <Posts :posts="posts" />
+      <Stories :profiles="data.profiles" />
+      <Posts :posts="data.posts" />
    </main>
 </template>
 
@@ -16,16 +16,10 @@ export default {
       Posts,
    },
    props: {
-      profiles: {
-         type: Array,
+      data: {
+         type: Object,
          default() {
-            return [];
-         },
-      },
-      posts: {
-         type: Array,
-         default() {
-            return [];
+            return {};
          },
       },
    },
