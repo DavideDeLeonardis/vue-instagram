@@ -1,0 +1,33 @@
+@import "@/assets/scss/mixins";
+
+nav {
+   @include flex($justify: space-between);
+   padding: 10px 20px;
+   border-bottom: 1px solid #eaeaea;
+
+   & > img {
+      width: 120px;
+   }
+
+   input {
+      width: 20%;
+      max-width: 250px;
+      min-width: 150px;
+      text-align: center;
+      padding: 7px 0;
+      border: 1px solid #bfbfbf;
+   }
+
+   .nav-right {
+      @include flex($gap: 15px);
+
+      img {
+         width: 40px;
+         border-radius: 50%;
+      }
+
+      &:not(img) {
+         font-size: 1.5em;
+      }
+   }
+}

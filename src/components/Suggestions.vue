@@ -1,0 +1,11 @@
+<template>
+   <div></div>
+</template>
+
+<script>
+export default {
+   name: "Suggestions",
+};
+</script>
+
+<style scoped lang="scss"></style>
