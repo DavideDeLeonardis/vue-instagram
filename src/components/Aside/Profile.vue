@@ -1,6 +1,4 @@
-<template>
-   <div>PROFILE</div>
-</template>
+<template></template>
 
 <script>
 export default {

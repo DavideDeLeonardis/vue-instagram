@@ -4,7 +4,7 @@
    @include flex($justify: flex-start, $gap: 10px);
    width: 100%;
    padding: 20px;
-   border: 1px solid #eaeaea;
+   border: 1px solid var(--lightgray);
    overflow: scroll;
 
    .storie {

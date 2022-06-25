@@ -1,5 +1,13 @@
 # Vue-boolgram
 
+## Instagram web home page made with Vue CLI; possibility of liking posts, adding comments, show all comments
+Soon:
+- Opening stories
+- Skeleton loading
+- Loading only some posts, when arriving at the end of the page loading others
+
+<br>
+
 ## Project setup
 ```
 npm install
@@ -10,9 +18,5 @@ npm install
 npm run serve
 ```
 
-- show post's date
-- right column
-- skeleton loading
-- Add comment
-- Caricare meno post, quando si arriva alla fine dello scroll se ne caricano altri
-- Le storie si aprono e visualizzano un’immagine
+### Screens
+<img src="./src/assets/images/Boolgram.png" />

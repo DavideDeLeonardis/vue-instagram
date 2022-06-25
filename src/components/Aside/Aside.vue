@@ -1,7 +1,7 @@
 <template>
    <aside>
       <Profile />
-      <Suggestions />
+      <Suggestions :profiles="profiles" />
    </aside>
 </template>
 
@@ -29,6 +29,12 @@ export default {
 <style scoped lang="scss">
 aside {
    width: 35%;
-   padding-left: 20px;
+   padding-left: 40px;
+
+   @media screen and (max-width: 650px) {
+      & {
+         display: none;
+      }
+   }
 }
 </style>

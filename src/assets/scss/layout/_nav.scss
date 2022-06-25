@@ -3,7 +3,7 @@
 nav {
    @include flex($justify: space-between);
    padding: 10px 20px;
-   border-bottom: 1px solid #eaeaea;
+   border-bottom: 1px solid var(--lightgray);
 
    & > img {
       width: 120px;
@@ -16,7 +16,7 @@ nav {
       min-width: 150px;
       text-align: center;
       padding: 7px 0;
-      border: 1px solid #bfbfbf;
+      border: 1px solid var(--gray);
    }
 
    .nav-right {

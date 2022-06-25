@@ -28,7 +28,11 @@
             :icon="['fas', 'heart']"
             @click="colorIconVar = false"
          />
-         <font-awesome-icon class="icon" :icon="['far', 'comment']" />
+         <font-awesome-icon
+            class="icon"
+            :icon="['far', 'comment']"
+            @click="focusInput()"
+         />
          <div class="container-likes">
             <img
                class="img-like"
@@ -36,13 +40,15 @@
                :alt="`${post.profile_name} image`"
             />
             <div>
-               Piace a <span class="bold">{{ post.likes[0].username }}</span>
+               <span class="bold">{{ post.likes[0].username }}</span>
                <span v-if="post.likes.length > 1">
-                  e <span class="bold">altri {{ getRemainingLikes() }}</span>
+                  and <span class="bold">other {{ getRemainingLikes() }}</span>
                </span>
                <span v-else-if="post.likes.length == 1 && colorIconVar">
-                  e <span class="bold">a te</span>
+                  and <span class="bold">you</span>
                </span>
+               <span v-if="post.likes.length == 1"> like</span>
+               <span v-else> likes</span>
             </div>
          </div>
          <div class="caption">
@@ -54,24 +60,32 @@
             v-if="post.comments.length > 3 && !showAllCommentsVar"
             @click="showAllCommentsVar = true"
          >
-            Mostra tutti e {{ post.comments.length }} i commenti
+            Show all {{ post.comments.length }} comments
          </button>
          <Comment
             v-for="(comment, index) in getComments()"
             :key="`comment-${index}`"
             :comment="comment"
          />
-         <span class="time">33 ore fa</span>
+         <span class="time">{{ getDate() }}</span>
       </div>
       <div class="input-container">
-         <input type="text" placeholder="Aggiungi un commento" />
-         <span>Pubblica</span>
+         <input
+            type="text"
+            ref="comment"
+            placeholder="Leave a comment"
+            v-model="commentValue"
+            @keyup.enter="addComment()"
+         />
+         <button @click="addComment()">Publish</button>
       </div>
    </li>
 </template>
 
 <script>
 import Comment from "./Comment";
+
+import dayjs from "dayjs";
 
 export default {
    name: "Post",
@@ -82,6 +96,7 @@ export default {
       return {
          showAllCommentsVar: false,
          colorIconVar: false,
+         commentValue: "",
       };
    },
    props: {
@@ -93,6 +108,18 @@ export default {
       },
    },
    methods: {
+      focusInput() {
+         this.$nextTick(() => this.$refs.comment.focus());
+      },
+      addComment() {
+         if (this.commentValue != "") {
+            this.post.comments.unshift({
+               username: "Davide",
+               text: this.commentValue,
+            });
+         }
+         this.commentValue = "";
+      },
       getComments() {
          if (this.post.comments.length > 3 && !this.showAllCommentsVar) {
             return this.post.comments.slice(0, 3);
@@ -106,10 +133,10 @@ export default {
          } else {
             return this.post.likes.length;
          }
-      }
-   },
-   created() {
-      console.log(this.post);
+      },
+      getDate() {
+         return dayjs(this.post.date.date).format("DD/MM/YYYY");
+      },
    },
 };
 </script>

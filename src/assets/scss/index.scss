@@ -1,5 +1,11 @@
 @import "./mixins";
 
+:root {
+   --blue: #0077ff;
+   --gray: #8f8f8f;
+   --lightgray: #eaeaea;
+}
+
 // commons
 * {
    margin: 0;

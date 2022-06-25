@@ -29,5 +29,11 @@ export default {
 <style scoped lang="scss">
 main {
    width: 65%;
+
+   @media screen and (max-width: 650px) {
+      & {
+         width: 100%;
+      }
+   }
 }
 </style>

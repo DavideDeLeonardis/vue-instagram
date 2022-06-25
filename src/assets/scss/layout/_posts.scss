@@ -6,7 +6,7 @@
    .post {
       width: 100%;
       margin-bottom: 50px;
-      border: 1px solid #eaeaea;
+      border: 1px solid var(--lightgray);
 
       .post-header {
          @include flex($justify: space-between);
@@ -39,7 +39,7 @@
          }
 
          .icon-red {
-            color: red;
+            color: #ff0000;
          }
 
          .container-likes {
@@ -59,7 +59,7 @@
 
          button,
          .time {
-            color: #a1a1a1;
+            color: var(--gray);
          }
 
          .time {
@@ -73,7 +73,7 @@
          @include flex($justify: inherit);
          height: 40px;
          padding: 20px 10px;
-         border-top: 1px solid #eaeaea;
+         border-top: 1px solid var(--lightgray);
 
          input {
             width: 90%;
@@ -81,9 +81,9 @@
             border: none;
          }
 
-         span {
-            color: rgb(0, 119, 255);
-            cursor: pointer;
+         button {
+            font-size: 1em;
+            color: var(--blue);
          }
       }
    }
