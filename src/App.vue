@@ -32,10 +32,10 @@ export default {
       };
    },
    methods: {
-      getData(endpoint, array) {
-         Axios.get(`${this.api_start}/${endpoint}`)
+      getData(endpointArray) {
+         Axios.get(`${this.api_start}/${endpointArray}`)
             .then((result) => {
-               switch (array) {
+               switch (endpointArray) {
                   case "profiles":
                      this.data.profiles = result.data;
                      break;
@@ -48,8 +48,8 @@ export default {
       },
    },
    created() {
-      this.getData("profiles", "profiles");
-      this.getData("posts", "posts");
+      this.getData("profiles");
+      this.getData("posts");
    },
 };
 </script>
