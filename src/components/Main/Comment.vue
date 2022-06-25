@@ -1,6 +1,6 @@
 <template>
    <div>
-      <span v-if="comment.username" class="bold">{{ comment.username }}</span
+      <span class="bold">{{ comment.username }}</span
       >&nbsp;
       <span>{{ comment.text }}</span>
    </div>
@@ -19,5 +19,3 @@ export default {
    },
 };
 </script>
-
-<style></style>

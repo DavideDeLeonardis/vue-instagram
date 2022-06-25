@@ -1,4 +1,4 @@
-# vue-boolgram
+# Vue-boolgram
 
 ## Project setup
 ```
@@ -10,10 +10,9 @@ npm install
 npm run serve
 ```
 
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+- show post's date
+- right column
+- skeleton loading
+- Add comment
+- Caricare meno post, quando si arriva alla fine dello scroll se ne caricano altri
+- Le storie si aprono e visualizzano un’immagine

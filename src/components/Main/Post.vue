@@ -16,7 +16,18 @@
          :alt="`${post.profile_fullname} image`"
       />
       <div class="post-footer">
-         <font-awesome-icon class="icon" :icon="['far', 'heart']" />
+         <font-awesome-icon
+            v-if="!colorIconVar"
+            class="icon"
+            :icon="['far', 'heart']"
+            @click="colorIconVar = true"
+         />
+         <font-awesome-icon
+            v-if="colorIconVar"
+            class="icon icon-red"
+            :icon="['fas', 'heart']"
+            @click="colorIconVar = false"
+         />
          <font-awesome-icon class="icon" :icon="['far', 'comment']" />
          <div class="container-likes">
             <img
@@ -27,7 +38,10 @@
             <div>
                Piace a <span class="bold">{{ post.likes[0].username }}</span>
                <span v-if="post.likes.length > 1">
-                  e <span class="bold">altri {{ post.likes.length - 1 }}</span>
+                  e <span class="bold">altri {{ getRemainingLikes() }}</span>
+               </span>
+               <span v-else-if="post.likes.length == 1 && colorIconVar">
+                  e <span class="bold">a te</span>
                </span>
             </div>
          </div>
@@ -37,8 +51,8 @@
             <span>{{ post.post_text }}</span>
          </div>
          <button
-            v-if="post.comments.length > 3 && !showAllComments"
-            @click="showAllComments = true"
+            v-if="post.comments.length > 3 && !showAllCommentsVar"
+            @click="showAllCommentsVar = true"
          >
             Mostra tutti e {{ post.comments.length }} i commenti
          </button>
@@ -66,7 +80,8 @@ export default {
    },
    data() {
       return {
-         showAllComments: false,
+         showAllCommentsVar: false,
+         colorIconVar: false,
       };
    },
    props: {
@@ -79,12 +94,19 @@ export default {
    },
    methods: {
       getComments() {
-         if (this.post.comments.length > 3 && !this.showAllComments) {
+         if (this.post.comments.length > 3 && !this.showAllCommentsVar) {
             return this.post.comments.slice(0, 3);
          } else {
             return this.post.comments;
          }
       },
+      getRemainingLikes() {
+         if (!this.colorIconVar) {
+            return this.post.likes.length - 1;
+         } else {
+            return this.post.likes.length;
+         }
+      }
    },
    created() {
       console.log(this.post);

@@ -21,6 +21,7 @@
                padding: 2px;
                border: 2px solid #c700c7;
                border-radius: 50%;
+               cursor: pointer;
             }
          }
       }
@@ -35,6 +36,10 @@
          .icon {
             font-size: 1.3em;
             margin-right: 15px;
+         }
+
+         .icon-red {
+            color: red;
          }
 
          .container-likes {
