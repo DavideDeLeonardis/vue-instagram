@@ -3,8 +3,8 @@
       <img src="../assets/images/logo.png" alt="boolgram logo" />
       <input type="text" placeholder="Cerca" name="cerca" id="cerca" />
       <div class="nav-right">
-         <font-awesome-icon :icon="['far', 'heart']" />
-         <font-awesome-icon :icon="['fas', 'home']" />
+         <font-awesome-icon class="icon" :icon="['far', 'heart']" />
+         <font-awesome-icon class="icon" :icon="['fas', 'home']" />
          <img src="../assets/images/profile.jpg" alt="profile image" />
       </div>
    </nav>

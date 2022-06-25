@@ -1,8 +1,8 @@
 <template>
-   <div class="storie">
+   <li class="storie">
       <img src="../../assets/images/profile.jpg" alt="Storie image" />
       <span>Nome</span>
-   </div>
+   </li>
 </template>
 
 <script>

@@ -21,5 +21,6 @@ export default {
 <style scoped lang="scss">
 aside {
    width: 35%;
+   padding-left: 20px;
 }
 </style>

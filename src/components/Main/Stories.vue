@@ -1,5 +1,5 @@
 <template>
-   <div class="stories">
+   <ul class="stories">
       <Storie />
       <Storie />
       <Storie />
@@ -13,7 +13,7 @@
       <Storie />
       <Storie />
       <Storie />
-   </div>
+   </ul>
 </template>
 
 <script>

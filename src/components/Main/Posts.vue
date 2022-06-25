@@ -1,11 +1,11 @@
 <template>
-   <div class="posts">
+   <ul class="posts">
       <Post />
       <Post />
       <Post />
       <Post />
       <Post />
-   </div>
+   </ul>
 </template>
 
 <script>

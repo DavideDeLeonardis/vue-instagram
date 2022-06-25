@@ -24,8 +24,56 @@
          }
       }
 
-      img {
+      .post-image {
          width: 100%;
+      }
+
+      .post-footer {
+         padding: 10px;
+
+         .icon {
+            font-size: 1.3em;
+            margin-right: 15px;
+         }
+
+         .container-likes {
+            @include flex($justify: flex-start, $gap: 10px);
+            margin: 10px 0;
+
+            .img-like {
+               width: 25px;
+               border-radius: 50%;
+            }
+         }
+
+         button,
+         .time {
+            color: #a1a1a1;
+            margin-top: 10px;
+         }
+
+         .time {
+            display: block;
+            font-size: 0.8em;
+         }
+      }
+
+      .input-container {
+         @include flex($justify: inherit);
+         height: 40px;
+         padding: 20px 10px;
+         border-top: 1px solid #eaeaea;
+
+         input {
+            width: 90%;
+            font-size: 0.9em;
+            border: none;
+         }
+
+         span {
+            color: rgb(0, 119, 255);
+            cursor: pointer;
+         }
       }
    }
 }
