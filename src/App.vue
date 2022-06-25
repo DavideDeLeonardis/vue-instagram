@@ -1,19 +1,24 @@
 <template>
    <div id="app">
       <Nav />
-      <Main />
+      <div class="container main-container">
+         <Main />
+         <Aside />
+      </div>
    </div>
 </template>
 
 <script>
 import Nav from "@/components/Nav";
-import Main from "@/components/Main";
+import Main from "@/components/Main/Main";
+import Aside from "@/components/Aside/Aside";
 
 export default {
    name: "App",
    components: {
       Nav,
-      Main
+      Main,
+      Aside,
    },
 };
 </script>

@@ -1,0 +1,32 @@
+<template>
+   <div class="stories">
+      <Storie />
+      <Storie />
+      <Storie />
+      <Storie />
+      <Storie />
+      <Storie />
+      <Storie />
+      <Storie />
+      <Storie />
+      <Storie />
+      <Storie />
+      <Storie />
+      <Storie />
+   </div>
+</template>
+
+<script>
+import Storie from "./Storie.vue";
+
+export default {
+   name: "Stories",
+   components: {
+      Storie,
+   },
+};
+</script>
+
+<style scoped lang="scss">
+@import "@/assets/scss/layout/stories";
+</style>
