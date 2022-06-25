@@ -1,7 +1,7 @@
 <template>
    <main>
-      <Stories />
-      <Posts />
+      <Stories :profiles="profiles" />
+      <Posts :posts="posts" />
    </main>
 </template>
 
@@ -13,8 +13,22 @@ export default {
    name: "Main",
    components: {
       Stories,
-      Posts
-   }
+      Posts,
+   },
+   props: {
+      profiles: {
+         type: Array,
+         default() {
+            return [];
+         },
+      },
+      posts: {
+         type: Array,
+         default() {
+            return [];
+         },
+      },
+   },
 };
 </script>
 

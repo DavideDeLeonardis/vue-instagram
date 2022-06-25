@@ -13,8 +13,16 @@ export default {
    name: "Aside",
    components: {
       Profile,
-      Suggestions
-   }
+      Suggestions,
+   },
+   props: {
+      profiles: {
+         type: Array,
+         default() {
+            return [];
+         },
+      },
+   },
 };
 </script>
 

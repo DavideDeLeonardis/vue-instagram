@@ -1,13 +1,21 @@
 <template>
    <li class="storie">
-      <img src="../../assets/images/profile.jpg" alt="Storie image" />
-      <span>Nome</span>
+      <img :src="storie.profile_picture" :alt="`${storie.profile_name} image`" />
+      <span>{{ storie.profile_name }}</span>
    </li>
 </template>
 
 <script>
 export default {
    name: "Storie",
+   props: {
+      storie: {
+         type: Object,
+         default() {
+            return {};
+         },
+      },
+   },
 };
 </script>
 

@@ -1,24 +1,26 @@
 @import "../mixins";
 
 .stories {
-   @include flex($justify: flex-start, $gap: 20px);
+   @include flex($justify: flex-start, $gap: 10px);
    width: 100%;
    padding: 20px;
    border: 1px solid #eaeaea;
    overflow: scroll;
-}
 
-.storie {
-   text-align: center;
+   .storie {
+      text-align: center;
+      max-width: 100px;
 
-   img {
-      width: 50px;
-      padding: 2px;
-      border: 2px solid #c700c7;
-      border-radius: 50%;
-   }
+      img {
+         width: 50px;
+         height: 50px;
+         padding: 2px;
+         border: 2px solid #c700c7;
+         border-radius: 50%;
+      }
 
-   span {
-      font-size: 0.7em;
+      span {
+         font-size: 0.7em;
+      }
    }
 }

@@ -1,18 +1,10 @@
 <template>
    <ul class="stories">
-      <Storie />
-      <Storie />
-      <Storie />
-      <Storie />
-      <Storie />
-      <Storie />
-      <Storie />
-      <Storie />
-      <Storie />
-      <Storie />
-      <Storie />
-      <Storie />
-      <Storie />
+      <Storie
+         v-for="(storie, index) in profiles"
+         :key="`storie-${index}`"
+         :storie="storie"
+      />
    </ul>
 </template>
 
@@ -23,6 +15,14 @@ export default {
    name: "Stories",
    components: {
       Storie,
+   },
+   props: {
+      profiles: {
+         type: Array,
+         default() {
+            return [];
+         },
+      },
    },
 };
 </script>
