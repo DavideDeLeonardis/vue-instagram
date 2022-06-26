@@ -6,8 +6,8 @@
 </template>
 
 <script>
-import Stories from "./Stories.vue";
-import Posts from "./Posts.vue";
+import Stories from "./Stories";
+import Posts from "./Posts/Posts";
 
 export default {
    name: "Main",

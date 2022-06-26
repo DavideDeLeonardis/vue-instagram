@@ -1,6 +1,9 @@
 <template>
    <li class="storie">
-      <img :src="storie.profile_picture" :alt="`${storie.profile_name} image`" /><br>
+      <img
+         :src="storie.profile_picture"
+         :alt="`${storie.profile_name} image`"
+      /><br />
       <span>{{ storie.profile_name }}</span>
    </li>
 </template>

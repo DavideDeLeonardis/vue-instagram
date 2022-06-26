@@ -1,5 +1,5 @@
 <template>
-   <div>
+   <section>
       <div class="heading">
          <h4>Recommended for you</h4>
          <span class="bold">Show all</span>
@@ -12,7 +12,7 @@
             :profile="profile"
          />
       </ul>
-   </div>
+   </section>
 </template>
 
 <script>
