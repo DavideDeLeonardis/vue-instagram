@@ -14,4 +14,4 @@ npm run serve
 ```
 
 ### Screens
-<img src="./src/assets/images/boolgram.png" />
+<img src="./src/assets/images/boolgram-home.png" />
