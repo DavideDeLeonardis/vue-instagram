@@ -1,6 +1,6 @@
 # Vue-boolgram
 
-## Instagram web's home page made with Vue CLI; possibility of show storie, like posts, add comments, show all comments
+## Instagram web's home page made with Vue CLI; possibility of show stories, like posts, add comments, show all comments
 ### <a href="https://vue-boolgram.web.app" target="_blank">- SITE PREVIEW -</a><br><br>
 
 ## Project setup
